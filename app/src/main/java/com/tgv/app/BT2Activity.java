@@ -98,6 +98,9 @@ public class BT2Activity extends AppCompatActivity {
                 if (TextUtils.isEmpty(inputA.getText().toString()) || TextUtils.isEmpty(inputB.getText().toString())){
                     txtResult.setText("Please check your input");
                 }
+                else if (Float.parseFloat(inputB.getText().toString()) == 0){
+                    txtResult.setText("Can't devide by 0");
+                }
                 else{
                     float a = Float.parseFloat(inputA.getText().toString());
                     float b = Float.parseFloat(inputB.getText().toString());
